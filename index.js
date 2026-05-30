@@ -1,9 +1,9 @@
 const express = require('express');
-const sequelize = require('./database');
+const sequelize = require('./models/database');
 const peliculasRoutes = require('./routes/peliculas.routes');
 const authRoutes = require('./routes/auth.routes'); // Importamos las rutas de login
 const logger = require('./middlewares/logger');
-const validarToken = require('./middlewares/validarToken'); // Importamos el middleware JWT
+const validarToken = require('./middlewares/validar-tokens'); // Importamos el middleware JWT
 
 const app = express();
 const PORT = process.env.PORT || 3000;
